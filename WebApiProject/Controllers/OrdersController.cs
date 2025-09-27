@@ -38,9 +38,9 @@ namespace WebApiProject.Controllers
         {
             var order = await _context.Orders
                 .Include(o => o.customers)
-                .Include(o => o.OrderItems)            // thêm dòng này
-                .ThenInclude(oi => oi.Product)         // nếu cần lấy cả thông tin sản phẩm
+                .Include(o => o.OrderItems)
                 .FirstOrDefaultAsync(o => o.TransactionId == id);
+
 
             if (order == null)
             {

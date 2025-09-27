@@ -42,7 +42,7 @@
             lbOrderDate = new Label();
             lbCustomer = new Label();
             lbOderId = new Label();
-            Items = new DataGridViewTextBoxColumn();
+            ItemName = new DataGridViewTextBoxColumn();
             Quantity = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgvListOfItems).BeginInit();
@@ -105,7 +105,7 @@
             // dtgvListOfItems
             // 
             dtgvListOfItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvListOfItems.Columns.AddRange(new DataGridViewColumn[] { Items, Quantity, Price });
+            dtgvListOfItems.Columns.AddRange(new DataGridViewColumn[] { ItemName, Quantity, Price });
             dtgvListOfItems.Location = new Point(61, 320);
             dtgvListOfItems.Name = "dtgvListOfItems";
             dtgvListOfItems.RowHeadersWidth = 51;
@@ -177,13 +177,13 @@
             lbOderId.TabIndex = 6;
             lbOderId.Text = "label12";
             // 
-            // Items
+            // ItemName
             // 
-            Items.DataPropertyName = "ItemName";
-            Items.HeaderText = "Items";
-            Items.MinimumWidth = 6;
-            Items.Name = "Items";
-            Items.Width = 150;
+            ItemName.DataPropertyName = "ItemName";
+            ItemName.HeaderText = "Items";
+            ItemName.MinimumWidth = 6;
+            ItemName.Name = "ItemName";
+            ItemName.Width = 150;
             // 
             // Quantity
             // 
@@ -248,7 +248,7 @@
         private Label lbOrderDate;
         private Label lbCustomer;
         private Label lbOderId;
-        private DataGridViewTextBoxColumn Items;
+        private DataGridViewTextBoxColumn ItemName;
         private DataGridViewTextBoxColumn Quantity;
         private DataGridViewTextBoxColumn Price;
     }

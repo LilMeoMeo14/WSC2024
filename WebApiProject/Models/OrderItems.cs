@@ -21,10 +21,13 @@ public class OrderItems
     public decimal Price { get; set; }
 
     // Navigation property tới Product
-    [ForeignKey("ProductId")]   
     public Products Product { get; set; }
+    public string ProductName => Product == null ? "" : Product.ProductName;
+
+    // goi toi san pham trong product
 
     // Navigation property tới Order
     [ForeignKey("TransactionId")]
     public Orders orders { get; set; }
+ 
 }
